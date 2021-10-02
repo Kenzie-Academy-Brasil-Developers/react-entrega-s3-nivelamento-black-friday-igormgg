@@ -7,15 +7,17 @@ const Cart = ({ cart, anotherFlag }) => {
   }, 0);
 
   return (
-    <div>
-      {anotherFlag && <h1>Total da compra: {Number(cartTotal.toFixed(2))}</h1>}
-      <ul>
+    <div className="cartContainer">
+      {anotherFlag && (
+        <h1>Total da compra: R${Number(cartTotal.toFixed(2))}</h1>
+      )}
+      <ul className="cartBox">
         {anotherFlag &&
           cart.map((prd, index) => {
             return (
               <li key={index}>
                 <h2> {prd.name} </h2>
-                <h3> R${prd.price} </h3>
+                <h3>Preço original: R${prd.price} </h3>
                 <h4>Desconto obtido: {prd.discountPercentage}% </h4>
                 <h5>Preço abatido: R${Number(prd.discountPrice).toFixed(2)}</h5>
                 <h6>

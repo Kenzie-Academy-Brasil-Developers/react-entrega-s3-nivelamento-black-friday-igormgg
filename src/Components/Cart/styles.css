@@ -1,0 +1,49 @@
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartContainer h1 {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.cartBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cartBox li {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.cartBox h2 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cartBox h3 {
+  margin-bottom: 5px;
+}
+
+.cartBox h4 {
+  margin-bottom: 5px;
+}
+
+.cartBox h5 {
+  margin-bottom: 5px;
+}
+
+.cartBox h6 {
+  margin-bottom: 5px;
+}

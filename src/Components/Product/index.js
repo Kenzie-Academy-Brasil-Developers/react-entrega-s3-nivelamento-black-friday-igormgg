@@ -40,12 +40,12 @@ const Product = ({
   };
 
   return (
-    <div>
+    <div className="productContainer">
       <Button onClick={() => onClick()} variant="contained">
         Gerar promoção!
       </Button>
       {flag && (
-        <div>
+        <div className="productBox">
           <h1>{promoProduct.name}</h1>
           <h2>Preço original: R${promoProduct.price.toFixed(2)}</h2>
           <h3>Desconto obtido: {promoProduct.discountPercentage}% </h3>

@@ -1,0 +1,42 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productContainer button {
+  margin-top: 30px;
+}
+
+.productBox {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+.productBox h1 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.productBox h2 {
+  margin-bottom: 5px;
+}
+
+.productBox h3 {
+  margin-bottom: 5px;
+}
+
+.productBox h4 {
+  margin-bottom: 5px;
+}
+
+.productBox h5 {
+  margin-bottom: 5px;
+}
+
+.productBox button {
+  background-color: rgb(230, 230, 230);
+}

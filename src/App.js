@@ -16,7 +16,7 @@ function App() {
     { id: 6, name: "Cadeira Gamer Cruiser Preta FORTREK", price: 1215.16 },
   ]);
 
-  const [cart, setCart] = useState([]);
+  const [currentSale, setCurrentSale] = useState([]);
 
   const [showProduct, setShowProduct] = useState({});
 
@@ -44,8 +44,8 @@ function App() {
 
         <Product
           useProduct={useProduct}
-          cart={cart}
-          setCart={setCart}
+          cart={currentSale}
+          setCart={setCurrentSale}
           showProduct={showProduct}
           setShowProduct={setShowProduct}
           discount={discount}
@@ -54,7 +54,11 @@ function App() {
           setFlag={setFlag}
           setAnotherFlag={setAnotherFlag}
         />
-        <Cart cart={cart} discount={discount} anotherFlag={anotherFlag} />
+        <Cart
+          cart={currentSale}
+          discount={discount}
+          anotherFlag={anotherFlag}
+        />
       </main>
     </div>
   );
