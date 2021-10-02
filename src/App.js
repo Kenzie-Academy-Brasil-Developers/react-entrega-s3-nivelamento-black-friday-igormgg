@@ -3,8 +3,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
-// import ProductList from "./Components/ProductList";
 import Product from "./Components/Product";
+import Cart from "./Components/Cart";
 
 function App() {
   const [useProduct] = useState([
@@ -15,6 +15,16 @@ function App() {
     { id: 5, name: "Tablet Samsung Galaxy Tab S7", price: 4844.05 },
     { id: 6, name: "Cadeira Gamer Cruiser Preta FORTREK", price: 1215.16 },
   ]);
+
+  const [cart, setCart] = useState([]);
+
+  const [showProduct, setShowProduct] = useState({});
+
+  const [discount, setDiscount] = useState(0);
+
+  const [flag, setFlag] = useState(false);
+
+  const [anotherFlag, setAnotherFlag] = useState(false);
 
   return (
     <div className="App">
@@ -31,8 +41,20 @@ function App() {
           draggable
           pauseOnHover
         />
-        {/* <ProductList useProduct={useProduct} /> */}
-        <Product useProduct={useProduct} />
+
+        <Product
+          useProduct={useProduct}
+          cart={cart}
+          setCart={setCart}
+          showProduct={showProduct}
+          setShowProduct={setShowProduct}
+          discount={discount}
+          setDiscount={setDiscount}
+          flag={flag}
+          setFlag={setFlag}
+          setAnotherFlag={setAnotherFlag}
+        />
+        <Cart cart={cart} discount={discount} anotherFlag={anotherFlag} />
       </main>
     </div>
   );
